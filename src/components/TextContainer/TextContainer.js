@@ -4,8 +4,15 @@ import onlineIcon from '../../icons/onlineIcon.png';
 
 import './TextContainer.css';
 
-const TextContainer = ({ users }) => (
-  <div className="textContainer"> 
+const TextContainer = ({ users, room }) => {
+  const copyText = (event) => {
+    const evem = document.getElementById('link')
+    evem.select();
+    document.execCommand("copy");
+    
+  }
+  return(
+    <div className="textContainer"> 
     {
       users
         ? (
@@ -21,11 +28,18 @@ const TextContainer = ({ users }) => (
                 ))}
               </h2>
             </div>
+           
           </div>
         )
         : null
     }
+     <div>      
+      <h1 onClick={(event) => copyText(event)} className="inviteFriend" mt-20>Get link to invite friends to the chat:</h1>
+      <input id="link" type="text" value={`https://chatserver159.herokuapp.com//?room=${room}`}/>  
+    </div>
   </div>
-);
+  )
+  
+};
 
 export default TextContainer;

@@ -9,8 +9,7 @@
   
   .activeContainer {
     display: flex;
-    align-items: center;
-    margin-bottom: 50%;
+    align-items: center;    
   }
   
   .activeItem {
@@ -25,6 +24,23 @@
   .textContainer h1 {
     margin-bottom: 0px;
   }
+
+  .inviteFriend{
+    cursor: pointer;
+    color: white;
+    padding-bottom: 15px;
+  }
+
+  #link{  
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+  }
+  .fa-share-alt{
+    color: white;
+  }
+  
   
   @media (min-width: 320px) and (max-width: 1200px) {
     .textContainer {
