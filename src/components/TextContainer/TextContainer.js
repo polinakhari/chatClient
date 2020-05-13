@@ -35,7 +35,7 @@ const TextContainer = ({ users, room }) => {
     }
      <div>      
       <h1 onClick={(event) => copyText(event)} className="inviteFriend" mt-20>Get link to invite friends to the chat:</h1>
-      <input id="link" type="text" value={`https://chatserver159.herokuapp.com//?room=${room}`}/>  
+      <input id="link" type="text" value={`https://elegant-goldstine-e3061e.netlify.app/?room=${room}`}/>  
     </div>
   </div>
   )
